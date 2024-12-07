@@ -1,0 +1,320 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.head {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./images/home.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    width: 90vw;
+    margin: auto;
+    padding-top: 20px;
+    align-items: center;
+}
+
+.nav .logo {
+    font-size: 2.5vw;
+    font-family: "Kaushan Script", cursive;
+    color: whitesmoke;
+    text-decoration: none;
+
+}
+
+#checkbox {
+    display: none;
+}
+
+.icon {
+    font-size: 1.7rem;
+    color: white;
+    position: absolute;
+    display: none;
+    font-weight: 600;
+    cursor: pointer;
+    right: 5%;
+}
+
+.head ul {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    list-style-type: none;
+}
+
+.head ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.5vw;
+    font-family: "PT Sans", sans-serif;
+    position: relative;
+}
+
+.head ul li a::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background-color: wheat;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    transition: 0.5s;
+}
+
+.head ul li a:hover::after {
+    width: 100%;
+}
+
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.content h1 {
+    color: rgba(237, 237, 237, 0.6);
+    font-size: 2.8rem;
+}
+
+.maincontent {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    justify-items: center;
+    align-items: center;
+    background-color: antiquewhite;
+    padding: 80px 20px;
+}
+
+.maincontent .contents {
+    flex-shrink: 2;
+    width: 400px;
+    text-align: center;
+}
+
+.maincontent .contents h1 {
+    font-size: 35px;
+    line-height: 40px;
+    word-spacing: 5px;
+}
+
+.maincontent .contents p {
+    font-size: 1.2rem;
+    margin-top: 20px;
+    text-align: justify;
+}
+
+.maincontent .contents button {
+    margin-top: 20px;
+    font-size: 20px;
+    background-color: rgba(125, 125, 125, 0.8);
+    box-shadow: 10px 10px 10px gray;
+    border: none;
+    outline: none;
+    height: 40px;
+    width: 150px;
+}
+
+.maincontent .image {
+    width: 35%;
+}
+
+.maincontent .image img {
+    width: 100%;
+    height: 100%;
+    box-shadow: 15px 10px 10px 5px rgb(166, 166, 166);
+}
+
+.gallery {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0px auto;
+    gap: 20px;
+    padding: 20px 7%;
+}
+
+.gallery .box {
+    flex: 1 1 25%;
+    height: 20vw;
+}
+
+.gallery .box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.collection {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+    padding: 25px;
+}
+
+.collection .item {
+    flex: 1 2 15%;
+    height: 20vw;
+}
+
+.collection .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.footer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px 30px 40px;
+}
+
+.footer ul li {
+    list-style-type: none;
+    line-height: 30px;
+}
+
+.footer ul li a {
+    text-decoration: none;
+    font-size: 1rem;
+    cursor: pointer;
+    color: #a49191;
+}
+
+.footer .boxs {
+    margin-top: 30px;
+}
+
+.footer .boxs h1 {
+    margin-bottom: 15px;
+    font-size: 4vh;
+    color: white;
+    cursor: pointer;
+}
+
+@media (max-width:780px) {
+    .head ul {
+        gap: 15px;
+    }
+
+    .head ul li a {
+
+        font-size: 2vw;
+    }
+
+    .content h1 {
+        font-size: 2.2rem;
+        text-align: center;
+    }
+
+    .maincontent {
+        flex-direction: column;
+        padding: 50px 70px;
+    }
+
+    .maincontent .contents {
+        width: 70vw;
+    }
+
+    .maincontent .contents h1 {
+
+        font-size: 5vw;
+        line-height: 6vw;
+    }
+
+    .maincontent .image {
+        width: 70vw;
+        height: 40vw;
+
+    }
+
+    .maincontent .contents p {
+        font-size: 4vw;
+        margin-top: 12px;
+    }
+
+    .maincontent .contents button {
+        height: 6vw;
+        width: 18vw;
+        margin: 10px 0 28px;
+        font-size: 2.5vw;
+
+    }
+
+    .gallery {
+        padding: 20px 0;
+    }
+
+    .footer {
+        grid-template-columns: repeat(2, auto);
+    }
+}
+
+
+@media (max-width:450px) {
+    .nav .logo {
+        font-size: 25px;
+    }
+
+    .icon {
+        display: flex;
+    }
+
+    #closeicon {
+        display: none;
+    }
+
+    #checkbox:checked~.icon #menuicon {
+        display: none;
+    }
+
+    #checkbox:checked~.icon #closeicon {
+        display: block;
+        z-index: 2;
+        cursor: pointer;
+    }
+
+    .head ul {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgb(126 115 115);
+        top: 0;
+        left: 0;
+        z-index: 1;
+        display: block;
+        padding-top: 20px;
+        display: none;
+    }
+
+    .head ul li {
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .head ul li a {
+        font-size: 15px;
+    }
+
+    .head ul li a:hover {
+        color: rgb(97, 37, 37);
+    }
+
+    #checkbox:checked~ul {
+        display: block;
+    }
+}
